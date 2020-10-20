@@ -2,3 +2,45 @@
 
      * Create a button in `index.handlebars` that will submit the user input into the database.
      -->
+
+
+<form class="create-form">
+                
+    <label for="newburger" >New Burger:</label>
+     <input type="text" id="newburger">
+    {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+    <button type="submit">Add Burger</button>
+                
+ </form>
+
+<ul>
+  {{#each burgers}}
+    <li>
+      <p>{{burger_name}}</p>
+      
+      
+    </li>
+  {{/each}}
+</ul>
+
+
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+      <button type="button" class="eatburger btn btn-warning" id ="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+      <hr>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+ <ul>
+    {{#each burgers}}
+     {{#if devoured}}
+        <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+        <button type="button" class="trashburger btn btn-danger" id ="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+        <hr>
+     {{/if}}
+   {{/each}}
+</ul>
