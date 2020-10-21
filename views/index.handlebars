@@ -43,7 +43,6 @@
     {{#each burgers}}
      {{#if devoured}}
         <strong> {{this.id}} - {{this.burger_name}} </strong>
-        <button type="button" class="devoured" data-id="{{this.id}}" data-newDevoured="{{devour}}">DEVOURED</button>
         <hr>
      {{/if}}
    {{/each}}
