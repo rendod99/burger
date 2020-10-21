@@ -40,4 +40,11 @@ github.com/rendod99
 
 ## Links:
 
--
+## Heroku
+- https://arcane-inlet-71066.herokuapp.com/
+
+## GitHub Repo
+- https://github.com/rendod99/burger
+
+## ScreenShot:
+<img width="1000" alt="Screen Shot 2020-10-21 at 11 23 19 AM" src="https://user-images.githubusercontent.com/66277385/96749052-f402b000-138f-11eb-8fc8-1a1e247b7221.png">
