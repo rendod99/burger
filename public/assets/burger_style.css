@@ -1,0 +1,21 @@
+
+.createBurgerBtn{
+    background-color: yellow;
+color: black;
+}
+
+.toDevour{
+background-color: green;
+color: white;
+}
+
+.devoured{
+    background-color: red;
+    color: white;
+}
+
+html{
+    background-color: yellowgreen;
+}
+
+

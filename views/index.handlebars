@@ -1,46 +1,52 @@
-<!--Setup the `index.handlebars` to have the template that Handlebars can render onto.
-
-     * Create a button in `index.handlebars` that will submit the user input into the database.
-     -->
 
 
-<form class="create-form">
+<div class="card text-white bg-primary mb-3" style="max-width: 200rem;">
+  <div class="card-header"><h1><strong>EAT DA BURGER!</strong></h1></div>
+  <div class="card-body">
+    <p class="card-text createBgr"><h4>CREATE a new burger or DEVOUR a burger!!</h4></p>
+  </div>
+</div>
+
+ <div class="card text-white bg-warning mb-3 createBurger" style="max-width: 200rem;">
+  <div class="card-header"><h2>Create a new burger</h2></div>
+  <div class="card-body">
+    <form class="card-text">
                 
-    <label for="newburger" >New Burger:</label>
+    <label for="newburger" ><h2>New Burger:</h2></label>
      <input type="text" id="newburger">
-    {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
-    <button type="submit">Add Burger</button>
+    <button type="submit" class="createBurgerBtn">ADD BURGER</button>
                 
  </form>
-
-<ul>
-  {{#each burgers}}
-    <li>
-      <p>{{burger_name}}</p>
-      
-      
-    </li>
-  {{/each}}
-</ul>
-
-
-
-<ul>
+  </div>
+</div>
+ 
+ <div class="card text-white bg-success mb-3" style="max-width: 200rem;">
+  <div class="card-header"><h2>Burgers to Devour</h2></div>
+  <div class="card-body">
+    <ul class="card-text"><h4>
   {{#each burgers}}
     {{#unless devoured}}
-      <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-      <button type="button" class="eatburger btn btn-warning" id ="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+      <strong> {{this.id}} - {{this.burger_name}} </strong>
+      <button type="button" class="devourBurger toDevour"  data-id="{{this.id}}" data-newDevoured="{{devour}}">DEVOUR</button>
       <hr>
     {{/unless}}
   {{/each}}
-</ul>
+</h4></ul>
+  </div>
+</div>
 
- <ul>
+ 
+ <div class="card text-white bg-danger mb-3" style="max-width: 200rem;">
+  <div class="card-header"><h2>Devoured Burgers</h2></div>
+  <div class="card-body">
+    <ul class="card-text"><h4>
     {{#each burgers}}
      {{#if devoured}}
-        <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
-        <button type="button" class="trashburger btn btn-danger" id ="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+        <strong> {{this.id}} - {{this.burger_name}} </strong>
+        <button type="button" class="devoured" data-id="{{this.id}}" data-newDevoured="{{devour}}">DEVOURED</button>
         <hr>
      {{/if}}
    {{/each}}
-</ul>
+</h4></ul>
+  </div>
+</div>
